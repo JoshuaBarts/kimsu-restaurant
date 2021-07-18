@@ -66,7 +66,7 @@ $(document).ready(function() {
       event.preventDefault();
       request = $.ajax({
         type: "GET",
-        url: 'http://api.openweathermap.org/data/2.5/weather?',
+        url: 'https://api.openweathermap.org/data/2.5/weather?',
         data: {
           q: $("#selection option:selected").val(),
           appid: '8711bc88385b2a5e816ab7e60b689176',
@@ -89,7 +89,7 @@ $(document).ready(function() {
       event.preventDefault();
       request = $.ajax({
         type: "GET",
-        url: 'http://api.openweathermap.org/data/2.5/weather?',
+        url: 'https://api.openweathermap.org/data/2.5/weather?',
         data: {
           q: $("#special_city").val(),
           appid: '8711bc88385b2a5e816ab7e60b689176',
