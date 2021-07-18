@@ -1,0 +1,151 @@
+<!-- MENU PAGE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>김수 Restaurant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Jquery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Favicon link -->
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      float: none;
+      display: inline-block;
+      padding: 15px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 31px;
+      box-shadow: 5px black;
+      border: 1px solid;
+      transition: 350ms;
+      cursor: pointer;
+      background: linear-gradient(159deg, white,white, white, rgba(0,0,0,0.4682247899159664) 100%);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="header" class="jumbotron text-left" style="margin-bottom:0;">
+    <div id="header-text">
+      <h1>김수 Menu</h1>
+      <h4>Foods for the soul</h4> 
+    </div>
+  </div>
+
+  <!-- NAVBAR MENU -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="packages.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>    
+      </ul>
+    </div>  
+  </nav>
+
+  <!-- MENU INFORMATION -->
+  <div class="container-lg" style="margin-top:30px">
+    <div id="welcome">
+      <h1>Menu</h1>
+      <p>Here are our list of delicious and healthy menus.</p>
+    </div>
+    <hr>
+    <div id="menu"></div>
+    <div id="list">
+      <h1>Your order</h1>
+      <div  id="item" style="text-align: center;">
+        <h1 id="message" class="font-weight-bold"></h1>
+        <div>
+          <h1 id="timer" class="text-danger"></h1>
+        </div>
+        <h1 id="price"></h1>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" id="bar"></div>
+        </div>
+        <hr>
+      </div>
+        <div style="text-align: center;" class="container-lg">
+          <button class="btn btn-primary" id="order" style="width: 50%;">Order Now</button>
+          <div id="user" style="text-align: center;">
+            <form onsubmit="return false" id="order-form">
+              Please enter your email: <input type="email" id="email_user" required>
+            <input type="submit" class="btn btn-primary" id="submit-order" value="Submit">
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- This will show after ordering -->
+  <div class="container-lg" style="text-align: center; background-image: url(images/background.jpg); background-size:cover; border-radius: 20px; margin-top: 30px;" id="thankyou">
+    <br><br>
+    <div id="item-detail" style="margin-top: 30px;" class="line"></div>
+      <hr>
+      <div>
+        <h2 id="details" style="text-align: left; color: white;">Your order receipt:</h2>
+        <h4 id="quantity-item" style="color: white; text-align: left;"></h4>
+        <h4 id="item-price" style="color: white; text-align: left;"></h4>
+      </div>
+      <br><br>
+    <h3 id="final" style="color: white;"></h3>
+    <hr>
+    <a  href="packages.html"><button type="button" class="btn btn-outline-info">Order More</button></a>
+    <h4 id="product"></h4>
+    <br>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-dark" style="margin-top: 10%;">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3 item">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>김수 Restaurant</h3>
+                    <p>Our mission is to give our customers a place to celebrate life’s special moments by offering the best Korean foods, service, and ambiance in Victoria.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-google"></i></a></div>
+            </div>
+            <p class="copyright">김수 Restaurant © 2021 All rights reserved</p>
+        </div>
+    </footer>
+  </div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="includes/script.js"></script>
+<script src="includes/food-packages.js"></script>
+<script src="includes/food.js"></script>
+
+</body>
+</html>
